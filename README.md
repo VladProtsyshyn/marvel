@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+﻿# Marvel Information Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React project based on the Marvel universe. I built it while studying React and then continued improving it step by step: moved components to functional components, added routing, loading/error states, a search form, and deployment to GitHub Pages.
 
-## Available Scripts
+Live demo: [https://VladProtsyshyn.github.io/marvel](https://VladProtsyshyn.github.io/marvel)
 
-In the project directory, you can run:
+## About The Project
 
-### `yarn start`
+The app lets users browse Marvel characters and comics, open detail pages, and search for a character by name. The main goal of this project was to practice real React patterns, not just static layout.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I worked on:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- refactoring class components to functional components;
+- working with React hooks;
+- routing with `react-router-dom`;
+- loading, error, waiting, and confirmed states using an FSM-style approach;
+- reusable service logic for API requests;
+- Formik and Yup for the character search form;
+- deployment to GitHub Pages;
+- code splitting with React.lazy and Suspense.
 
-### `yarn test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Random character block on the main page.
+- Character list with "load more" behavior.
+- Character details panel.
+- Search form for finding a character by name.
+- Comics page with pagination.
+- Separate pages for comic details and character details.
+- Loading spinners, skeleton UI, and error states.
+- Client-side routing.
+- Lazy-loaded pages with a fallback spinner.
+- API layer with data transformation before rendering.
+- Basic accessibility work for keyboard selection in the character list.
 
-### `yarn build`
+## Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- React Router
+- Formik
+- Yup
+- Sass
+- Create React App
+- GitHub Pages
+- Marvel API data
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Screenshots should be placed in:
 
-### `yarn eject`
+```text
+docs/screenshots/
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Use these file names:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```text
+characters-page.png
+character-search.png
+comics-page.png
+comic-details-page.png
+character-details-page.png
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+After adding the screenshots, they will be shown here:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Characters Page
 
-## Learn More
+![Characters page](docs/screenshots/characters-page.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Character Search
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Character search](docs/screenshots/character-search.png)
 
-### Code Splitting
+### Comics Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Comics page](docs/screenshots/comics-page.png)
 
-### Analyzing the Bundle Size
+### Comic Details Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Comic details page](docs/screenshots/comic-details-page.png)
 
-### Making a Progressive Web App
+### Character Details Page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Character details page](docs/screenshots/character-details-page.png)
 
-### Advanced Configuration
+## What I Practiced
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project helped me practice several important React topics:
 
-### Deployment
+- component decomposition;
+- props and state management;
+- `useState`, `useEffect`, `useRef`, and `useMemo`;
+- custom hooks;
+- useCallback for reusable request logic;
+- useRef for focusing selected character cards;
+- useMemo for memoized rendering;
+- PropTypes for component props validation;
+- API requests and response transformation;
+- conditional rendering;
+- finite-state-machine style UI states;
+- form validation;
+- dynamic routes with useParams;
+- lazy loading pages with React.lazy and Suspense;
+- deployment flow.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Getting Started
 
-### `yarn build` fails to minify
+Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm install
+```
+
+Run the project locally:
+
+```bash
+npm start
+```
+
+Build the project:
+
+```bash
+npm run build
+```
+
+Deploy to GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+## Notes
+
+The project uses GitHub Pages, so the router is configured with the `/marvel` base path.
+
+I plan to continue improving the project: clean up remaining course-related code, polish the UI, and keep the README updated with screenshots.
+
